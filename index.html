@@ -1,22 +1,83 @@
 <!DOCTYPE html>
-<html lang=""en">
+<html lang="en">
 <head>
     <title>CSCE 242</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Trebuchet MS", "Gill Sans", Arial, sans-serif;
+            background: #f8e6ef;
+            color: #3b1f2b;
+        }
+
+        #portal {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 28px 32px;
+            background: #fff1f6;
+            border: 2px solid #d9a1b6;
+            border-radius: 12px;
+            box-shadow: 0 16px 30px rgba(94, 38, 64, 0.18);
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #8b2f57;
+        }
+
+        h2 {
+            color: #a2476d;
+        }
+
+        #course-description {
+            line-height: 1.6;
+            color: #4a2a36;
+        }
+
+        #repo-link {
+            display: inline-block;
+            margin-top: 8px;
+            color: #b34a72;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        #assignments-title {
+            margin-top: 24px;
+        }
+
+        #assignment-list a {
+            text-decoration: none;
+            color: #9a3f64;
+            font-weight: 600;
+        }
+
+        #assignment-list a:hover {
+            color: #7a2e4d;
+        }
+    </style>
 </head>
 <body>
-    <h1>CSCE 242: Web Applications</h1>
-    <h2>Emma Roberts</h2>
+    <div id="portal">
+        <h1>CSCE 242: Web Applications</h1>
+        <h2>Emma Roberts</h2>
 
-    <p>
-        CSCE 242 focuses on the fundamentals of web development using HTML and CSS. The course introduces how websites are structured and how content is displayed in a browser. Students learn best practices for organizing files and writing clean, readable code.
-    </p>
+        <p id="course-description">
+            CSCE 242 focuses on the fundamentals of web development using HTML and CSS. The course introduces how websites are structured and how content is displayed in a browser. Students learn best practices for organizing files and writing clean, readable code.
+        </p>
 
-    <h2>Assignmants</h2>
+        <a id="repo-link" href="https://github.com/CSE-eroberts/CSE-eroberts.github.io">https://github.com/CSE-eroberts/CSE-eroberts.github.io</a>
 
-    <ul>
-        <li>
-            <a href="assignments/assignment1/index.html">Assignment 1: Basic HTML Structure</a>
-        </li>
-    </ul>
+        <h2 id="assignments-title">Assignments</h2>
+
+        <ul id="assignment-list">
+            <li>
+                <a href="assignments/assignment1/index.html">Assignment 1: Basic HTML Structure</a>
+            </li>
+            <li>
+                <a href="assignments/assignment2/index.html">Assignment 2: South Carolina Hiking Trails</a>
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
