@@ -1,83 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>CSCE 242</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f8e6ef;
-            color: #3b1f2b;
-        }
-
-        #portal {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 28px 32px;
-            background: #fff1f6;
-            border: 2px solid #d9a1b6;
-            border-radius: 12px;
-            box-shadow: 0 16px 30px rgba(94, 38, 64, 0.18);
-        }
-
-        h1 {
-            margin-top: 0;
-            color: #8b2f57;
-        }
-
-        h2 {
-            color: #a2476d;
-        }
-
-        #course-description {
-            line-height: 1.6;
-            color: #4a2a36;
-        }
-
-        #repo-link {
-            display: inline-block;
-            margin-top: 8px;
-            color: #b34a72;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        #assignments-title {
-            margin-top: 24px;
-        }
-
-        #assignment-list a {
-            text-decoration: none;
-            color: #9a3f64;
-            font-weight: 600;
-        }
-
-        #assignment-list a:hover {
-            color: #7a2e4d;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSCE 242 Portal</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="portal">
-        <h1>CSCE 242: Web Applications</h1>
-        <h2>Emma Roberts</h2>
+    <div class="page">
+        <header class="site-header">
+            <h2 class="student-name">Emma Roberts</h2>
+            <h1>CSCE 242: Web Applications</h1>
+            <p class="course-description">
+                CSCE 242 focuses on the fundamentals of web development using HTML and CSS. The course introduces how websites are structured and how content is displayed in a browser. Students learn best practices for organizing files and writing clean, readable code.
+            </p>
+            <a class="repo-link" href="https://github.com/CSE-eroberts/CSE-eroberts.github.io">https://github.com/CSE-eroberts/CSE-eroberts.github.io</a>
+        </header>
 
-        <p id="course-description">
-            CSCE 242 focuses on the fundamentals of web development using HTML and CSS. The course introduces how websites are structured and how content is displayed in a browser. Students learn best practices for organizing files and writing clean, readable code.
-        </p>
+        <main>
+            <section class="content-section" id="assignments">
+                <h2>Assignments</h2>
+                <div class="card-grid">
+                    <article class="card">
+                        <a href="assignments/assignment1/index.html">
+                            <h3>Assignment 1 - Basic HTML</h3>
+                            <img src="images/assignment1img.png" alt="Screenshot of Assignment 1 page">
+                            <p>A single-page overview of color psychology, including lists, tables, and supporting images that explain how color influences mood.</p>
+                        </a>
+                    </article>
 
-        <a id="repo-link" href="https://github.com/CSE-eroberts/CSE-eroberts.github.io">https://github.com/CSE-eroberts/CSE-eroberts.github.io</a>
+                    <article class="card">
+                        <a href="assignments/assignment2/index.html">
+                            <h3>Assignment 2 - Basic CSS</h3>
+                            <img src="images/assignment2img.png" alt="Screenshot of Assignment 2 page">
+                            <p>A styled hiking trail guide with a hero section, photo row, and trail table that highlights updated access notes.</p>
+                        </a>
+                    </article>
 
-        <h2 id="assignments-title">Assignments</h2>
+                    <article class="card">
+                        <a href="assignments/assignment3/index.html">
+                            <h3>Assignment 3 - Page Layout</h3>
+                            <img src="images/assignment3img.png" alt="Screenshot of Assignment 3 page">
+                            <p>A multi-section layout that practices spacing, typography, and clean structure using reusable layout styles.</p>
+                        </a>
+                    </article>
+                </div>
+            </section>
 
-        <ul id="assignment-list">
-            <li>
-                <a href="assignments/assignment1/index.html">Assignment 1: Basic HTML Structure</a>
-            </li>
-            <li>
-                <a href="assignments/assignment2/index.html">Assignment 2: South Carolina Hiking Trails</a>
-            </li>
-        </ul>
+            <section class="content-section" id="projects">
+                <h2>Projects</h2>
+                <div class="card-grid">
+                    <article class="card">
+                        <a href="projects/part1">
+                            <h3>Project Topic - Part 1</h3>
+                            <img src="images/project-topic.svg" alt="Screenshot of project topic PDF">
+                            <p>The project topic proposal outlining the problem space, initial goals, and the audience I want to serve.</p>
+                        </a>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>More assignments and projects will be added each week.</p>
+        </footer>
     </div>
 </body>
 </html>
