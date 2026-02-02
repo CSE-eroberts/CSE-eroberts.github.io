@@ -431,7 +431,7 @@ a {
   background: #f2f2f2;
   border-top: 1px solid var(--gray-30);
   border-bottom: 1px solid var(--gray-30);
-  padding: 56px 0 48px;
+  padding: 64px 0 56px;
 }
 
 .footer-callout-inner {
@@ -440,8 +440,13 @@ a {
   text-align: center;
 }
 
+.footer-callout-inner p {
+  max-width: 520px;
+  margin: 0 auto;
+  color: var(--gray-70);
+}
 .footer-callout-inner h3 {
-  font-size: clamp(2rem, 3.2vw, 2.8rem);
+  font-size: clamp(2.2rem, 3.4vw, 3rem);
   color: var(--garnet);
   font-weight: 700;
 }
@@ -457,9 +462,12 @@ a {
 .btn.callout {
   background: var(--garnet);
   color: var(--white);
-  padding: 10px 22px;
+  padding: 10px 26px;
   border: 1px solid var(--garnet);
   box-shadow: 0 4px 0 rgba(0, 0, 0, 0.25);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.8rem;
 }
 
 .footer-local {
@@ -478,7 +486,7 @@ a {
 
 .footer-local-brand h4 {
   color: var(--garnet);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   margin-bottom: 14px;
 }
 
@@ -495,8 +503,9 @@ a {
 }
 
 .footer-socials a {
-  background: var(--garnet);
-  color: var(--white);
+  background: transparent;
+  color: var(--garnet);
+  border: 1px solid var(--garnet);
   border-radius: 999px;
   width: 28px;
   height: 28px;
@@ -526,7 +535,9 @@ a {
   color: var(--white);
   padding: 8px 14px;
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .address-title {
