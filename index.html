@@ -1,69 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSCE 242 Portal</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School of Medicine Columbia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="page">
-        <header class="site-header">
-            <h2 class="student-name">Emma Roberts</h2>
-            <h1>CSCE 242: Web Applications</h1>
-            <p class="course-description">
-                CSCE 242 focuses on the fundamentals of web development using HTML and CSS. The course introduces how websites are structured and how content is displayed in a browser. Students learn best practices for organizing files and writing clean, readable code.
-            </p>
-            <a class="repo-link" href="https://github.com/CSE-eroberts/CSE-eroberts.github.io">https://github.com/CSE-eroberts/CSE-eroberts.github.io</a>
-        </header>
-
-        <main>
-            <section class="content-section" id="assignments">
-                <h2>Assignments</h2>
-                <div class="card-grid">
-                    <article class="card">
-                        <a href="assignments/assignment1/index.html">
-                            <h3>Assignment 1 - Basic HTML</h3>
-                            <img src="images/assignment1img.png" alt="Screenshot of Assignment 1 page">
-                            <p>An overview of color psychology, including lists, tables, and supporting images that explain how color influences mood.</p>
-                        </a>
-                    </article>
-
-                    <article class="card">
-                        <a href="assignments/assignment2/index.html">
-                            <h3>Assignment 2 - Basic CSS</h3>
-                            <img src="images/assignment2img.png" alt="Screenshot of Assignment 2 page">
-                            <p>A styled hiking trail guide, photo row, and trail table that highlights updated access in South Carolina.</p>
-                        </a>
-                    </article>
-
-                    <article class="card">
-                        <a href="assignments/assignment3/index.html">
-                            <h3>Assignment 3 - Page Layout</h3>
-                            <img src="images/assignment3img.png" alt="Screenshot of Assignment 3 page">
-                            <p>A layout that practices spacing, typography, and clean structure using reusable layout styles.</p>
-                        </a>
-                    </article>
-                </div>
-            </section>
-
-            <section class="content-section" id="projects">
-                <h2>Projects</h2>
-                <div class="card-grid">
-                    <article class="card">
-                        <a href="projects/part1.pdf">
-                            <h3>Project Topic - Part 1</h3>
-                            <img src="images/project.png" alt="Screenshot of project topic PDF">
-                            <p>The project topic proposal outlining my cafe website idea, initial goals, and the audience I want to serve.</p>
-                        </a>
-                    </article>
-                </div>
-            </section>
-        </main>
-
-        <footer class="site-footer">
-            <p>More assignments and projects will be added each week.</p>
-        </footer>
+  <div class="site">
+    <div class="utility-bar">
+      <div class="container utility-inner">
+        <a href="#" class="usc-wordmark">University of South Carolina</a>
+        <div class="utility-links">
+          <a href="#">Apply</a>
+          <a href="#">Visit</a>
+          <a href="#">Give</a>
+          <a href="#">Directory</a>
+        </div>
+      </div>
     </div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo-lockup">
+          <img src="https://placehold.co/88x88" alt="University logo placeholder">
+          <div class="logo-text">
+            <p>College of Medicine</p>
+            <h1>School of Medicine Columbia</h1>
+          </div>
+        </div>
+        <a class="header-cta" href="#">Apply to Medicine</a>
+      </div>
+    </header>
+
+    <nav class="main-nav">
+      <div class="container">
+        <ul class="nav-list">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Education</a></li>
+          <li><a href="#">Research</a></li>
+          <li><a href="#">Centers</a></li>
+          <li><a href="#">Patient Care</a></li>
+          <li><a href="#">Student Life</a></li>
+          <li><a href="#">Alumni</a></li>
+          <li><a href="#">Give</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <img class="hero-image" src="https://placehold.co/1400x620" alt="Campus placeholder">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <p class="hero-eyebrow">School of Medicine Columbia</p>
+          <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.
+          </p>
+          <div class="hero-actions">
+            <a href="#" class="btn primary">Explore Programs</a>
+            <a href="#" class="btn ghost">Request Information</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="quick-links">
+        <div class="container quick-grid">
+          <article class="quick-card">
+            <img src="https://placehold.co/340x220" alt="Placeholder">
+            <h3>Admissions</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#">Learn more</a>
+          </article>
+          <article class="quick-card">
+            <img src="https://placehold.co/340x220" alt="Placeholder">
+            <h3>Academics</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#">Learn more</a>
+          </article>
+          <article class="quick-card">
+            <img src="https://placehold.co/340x220" alt="Placeholder">
+            <h3>Research</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#">Learn more</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="feature-band">
+        <div class="container feature-inner">
+          <div class="feature-text">
+            <p class="section-label">Featured Story</p>
+            <h3>Lorem ipsum dolor sit amet, consectetur.</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+              ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+            </p>
+            <a href="#" class="btn secondary">Read Story</a>
+          </div>
+          <div class="feature-image">
+            <img src="https://placehold.co/520x360" alt="Placeholder">
+          </div>
+        </div>
+      </section>
+
+      <section class="stats">
+        <div class="container stats-grid">
+          <div class="stat">
+            <span class="stat-number">150+</span>
+            <span class="stat-label">Lorem Ipsum</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">40</span>
+            <span class="stat-label">Dolor Sit</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">98%</span>
+            <span class="stat-label">Amet Consectetur</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">25</span>
+            <span class="stat-label">Adipiscing</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="news">
+        <div class="container">
+          <div class="section-heading">
+            <h3>News and Events</h3>
+            <a href="#">View all news</a>
+          </div>
+          <div class="news-grid">
+            <article class="news-card">
+              <img src="https://placehold.co/360x240" alt="Placeholder">
+              <div class="news-body">
+                <p class="news-tag">Event</p>
+                <h4>Lorem ipsum dolor sit amet.</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Read more</a>
+              </div>
+            </article>
+            <article class="news-card">
+              <img src="https://placehold.co/360x240" alt="Placeholder">
+              <div class="news-body">
+                <p class="news-tag">News</p>
+                <h4>Sed do eiusmod tempor.</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Read more</a>
+              </div>
+            </article>
+            <article class="news-card">
+              <img src="https://placehold.co/360x240" alt="Placeholder">
+              <div class="news-body">
+                <p class="news-tag">Update</p>
+                <h4>Ut enim ad minim veniam.</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Read more</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h4>School of Medicine Columbia</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>123 Placeholder Drive</p>
+          <p>Columbia, SC 29201</p>
+          <p>(000) 000-0000</p>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <a href="#">Faculty</a>
+          <a href="#">Students</a>
+          <a href="#">Staff</a>
+          <a href="#">Give to Medicine</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
