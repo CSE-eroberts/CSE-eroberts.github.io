@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 5 - Introduction to JavaScript</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="page-header">
+      <h1>Assignment 5</h1>
+      <p class="subtitle">Introduction to JavaScript</p>
+    </header>
+
+    <main class="three-columns">
+      <section class="panel" id="geometry-card" aria-label="Geometry">
+        <h2>Geometry</h2>
+        <div class="panel-body">
+          <div class="triangle" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section class="panel" aria-label="Select a Date">
+        <h2>Select A Date:</h2>
+        <div class="panel-body">
+          <label class="date-field">
+            <input type="date" id="date-input">
+          </label>
+          <p class="date-output" id="date-output"></p>
+        </div>
+      </section>
+
+      <section class="panel" aria-label="Frame Image">
+        <h2>Frame Image</h2>
+        <div class="panel-body">
+          <img
+            id="weather-image"
+            src="https://images.unsplash.com/photo-1499346030926-9a72daac6c63?auto=format&fit=crop&w=500&q=80"
+            data-cloudy="https://images.unsplash.com/photo-1499346030926-9a72daac6c63?auto=format&fit=crop&w=500&q=80"
+            data-sunny="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=500&q=80"
+            data-current="cloudy"
+            alt="Cloudy sky"
+          >
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
