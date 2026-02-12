@@ -1,6 +1,6 @@
 //button click example
 document.getElementById("btn-show-message").onclick = ()=>{
-    document.getElementById("p-message").innerHTML = "Hi Portia";
+    document.getElementById("p-message").innerHTML = "Hi Emma!";
 };
 
 //link click example
@@ -40,7 +40,38 @@ document.getElementById("txt-num-days").onchange = (e) => {
     }
 };
 
-//toggle nav
-document.getElementById("toggle-nav").onclick = () => {
-    document.querySelector("#main-nav ul").classList.toggle("hide-small");
+const p = document.getElementById("p-count-display");
+let count = 0;
+let countInterval;
+const startButton = document.getElementById("btn-start-count");
+
+startButton.onclick = () => {
+    countInterval = setInterval(()=>{
+        startButton.disabled = true;
+        p.innerHTML = count++;
+    },500);
 };
+
+document.getElementById("btn-pause-count").onclick = () => {
+    clearInterval(countInterval);
+    startButton.disabled = false;
+}
+
+document.getElementById("btn-stop-count").onclick = () => {
+    count = 0;
+    clearInterval(countInterval);
+    startButton.disabled = false;
+}
+
+/* Display the date */
+setInterval(()=>{
+    const today = new Date();
+    const month = today.getMonth();
+    const day = today.getDay();
+    const year = today.getFullYear();
+    const seconds = today.getSeconds();
+    const minutes = today.getMinutes();
+    const hours = today.getHours();
+
+    document.getElementById("p-date").innerHTML = `${hours}:${minutes}:${seconds}, ${month}/${day}/${year}`;
+}, 500);

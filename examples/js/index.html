@@ -2,12 +2,13 @@
 <html>
     <head>
         <title>JavaScript Demo</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div id="main-content">
             <header id="main-header">
                 <h1>JavaScript</h1>
+                <p id="p-date"></p>
                 <nav id="main-nav">
                     <div id="toggle-nav">
                         <div></div>
@@ -26,13 +27,16 @@
             <main id="content">
                 <div id="gallery" class="columns">
                     <section>
+                        <h3>Show Message</h3>
                         <button id="btn-show-message">Show</button>
                         <p id="p-message"></p>
                     </section>
                     <section>
+                        <h3>Click a Link</h3>
                         <p><a id="a-click" href="#">Click Me</a></p>
                     </section>
                     <section id="ball-playground">
+                        <h3>Animate a Ball</h3>
                         <button id="btn-bounce">Start</button>
                         <div id="ball"></div>
                     </section>
@@ -44,12 +48,27 @@
                         </p>
                         <p id="p-plant-message"></p>
                     </section>
+                    <section>
+                        <h3>Counter</h3>
+                        <p>
+                            <button id="btn-start-count">Start</button>
+                            <button id="btn-pause-count">Pause</button>
+                            <button id="btn-stop-count">Stop</button>
+                        </p>
+                        <p id="p-count-display"></p>
+                    </section>
+                    <section>
+                        <h3>Money Raising</h3>
+
+                        <div id="thermometer"></div>
+                    </section>
                 </div>
             </main>
             <footer id="main-footer">
 
             </footer>
         </div>
-        <script src="js/script.js"></script>
+        <script src="js/nav.js"></script>
+        <script src="js/intro.js"></script>
     </body>
 </html>
