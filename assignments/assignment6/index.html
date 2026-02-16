@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 8 - If Statements</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page-wrap">
+        <header class="top-header">
+            <h1>Assignment 8</h1>
+            <h2>If Statements</h2>
+
+            <nav class="menu" aria-label="Exercise menu">
+                <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="menu-items" aria-label="Toggle menu">
+                    <span id="toggle-arrow" class="toggle-arrow">&#9660;</span>
+                </button>
+                <ul id="menu-items" class="menu-items">
+                    <li><a id="link-ex1" href="#">Exercise 1</a></li>
+                    <li><a id="link-ex2" href="#">Exercise 2</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="exercise-1" class="panel">
+            <h3>How many minutes until class?</h3>
+            <div class="slider-wrap">
+                <input id="minutes-slider" type="range" min="0" max="60" value="24">
+            </div>
+            <div class="field-row">
+                <span id="slider-value">24 minutes</span>
+            </div>
+            <p id="minutes-message" class="message-box"></p>
+        </section>
+
+        <section id="exercise-2" class="panel hidden">
+            <h3>Countdown till class</h3>
+            <p id="countdown-message" class="message-box"></p>
+        </section>
+
+        <footer>
+            <p>@CSE-eroberts</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -46,8 +46,8 @@ let countInterval;
 const startButton = document.getElementById("btn-start-count");
 
 startButton.onclick = () => {
+    startButton.disabled = true;
     countInterval = setInterval(()=>{
-        startButton.disabled = true;
         p.innerHTML = count++;
     },500);
 };
@@ -59,6 +59,7 @@ document.getElementById("btn-pause-count").onclick = () => {
 
 document.getElementById("btn-stop-count").onclick = () => {
     count = 0;
+    p.innerHTML = count;
     clearInterval(countInterval);
     startButton.disabled = false;
 }
@@ -66,8 +67,8 @@ document.getElementById("btn-stop-count").onclick = () => {
 /* Display the date */
 setInterval(()=>{
     const today = new Date();
-    const month = today.getMonth();
-    const day = today.getDay();
+    const month = today.getMonth() + 1;
+    const day = today.getDate();
     const year = today.getFullYear();
     const seconds = today.getSeconds();
     const minutes = today.getMinutes();
