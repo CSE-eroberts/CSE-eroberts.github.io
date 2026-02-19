@@ -1,0 +1,165 @@
+:root {
+    /* Reference: custom CSS art recreated from the instructor-provided fish bowl image (no external template used). */
+    --page: #e9e2dd;
+    --glass-line: rgba(247, 247, 247, 0.86);
+    --water-top: #67b8e6;
+    --water-bottom: #44a4d8;
+    --text: #213b48;
+    --title-blue: #5f8f9d;
+    --loops-pink: #e38f9d;
+    --signature: #7ea3af;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 28px;
+    background: var(--page);
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+}
+
+.page-wrap {
+    width: min(560px, 96vw);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.assignment-title {
+    margin: 0 0 0.55rem;
+    color: var(--title-blue);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 700;
+}
+
+.loops-label {
+    margin: 0 0 1rem;
+    color: #de8f99;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.scene {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    padding: 0.6rem 0 1rem;
+    margin-top: 14px;
+}
+
+.signature {
+    margin: 0.5rem 0 0;
+    color: var(--signature);
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.bowl {
+    position: relative;
+    width: min(520px, 94vw);
+    aspect-ratio: 458 / 392;
+    border: 9px solid var(--glass-line);
+    border-radius: 50% 50% 47% 47% / 59% 59% 43% 43%;
+    background: rgba(255, 255, 255, 0.3);
+    overflow: visible;
+}
+
+.bowl::before {
+    content: "";
+    position: absolute;
+    left: 12%;
+    right: 12%;
+    top: -2%;
+    height: 14%;
+    background: rgba(255, 255, 255, 0.24);
+    border-radius: 0 0 48% 48%;
+    z-index: 3;
+}
+
+.rim {
+    position: absolute;
+    left: -3%;
+    width: 106%;
+    top: -3%;
+    height: 14%;
+    border: 5px solid rgba(248, 248, 248, 0.9);
+    border-radius: 50% / 78%;
+    background: #f3efec;
+    z-index: 6;
+}
+
+.water {
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    top: 14%;
+    bottom: 8%;
+    border-radius: 50% 50% 47% 47% / 50% 50% 44% 44%;
+    overflow: hidden;
+    background:
+        radial-gradient(130% 78% at 50% -5%, rgba(173, 224, 250, 0.85) 0%, rgba(128, 199, 238, 0.68) 34%, rgba(103, 184, 230, 0.05) 56%),
+        linear-gradient(180deg, var(--water-top) 0%, var(--water-bottom) 100%);
+}
+
+.water::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0));
+    pointer-events: none;
+}
+
+.bubble-layer {
+    position: absolute;
+    inset: 0;
+}
+
+.bubble {
+    position: absolute;
+    bottom: 8%;
+    border-radius: 50%;
+    border: 2px solid rgba(196, 234, 249, 0.6);
+    background: rgba(189, 230, 247, 0.48);
+    animation: rise linear infinite;
+}
+
+@keyframes rise {
+    0% {
+        transform: translate3d(0, 0, 0) scale(0.9);
+        opacity: 0;
+    }
+    15% {
+        opacity: 0.9;
+    }
+    100% {
+        transform: translate3d(var(--drift), -230px, 0) scale(1);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 520px) {
+    .bowl {
+        width: 94vw;
+    }
+
+    @keyframes rise {
+        0% {
+            transform: translate3d(0, 0, 0) scale(0.9);
+            opacity: 0;
+        }
+        15% {
+            opacity: 0.9;
+        }
+        100% {
+            transform: translate3d(var(--drift), -180px, 0) scale(1);
+            opacity: 0;
+        }
+    }
+}
