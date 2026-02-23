@@ -1,6 +1,6 @@
 const moods = {
     happy: {
-        "Happy by Pharrell Williams": "ZbZSe6N_BXs",
+        "Uptown Funk by Mark Ronson ft. Bruno Mars": "OPf0YbXqDm0",
         "Don't Stop Me Now by Queen": "HgzGwKwLmgM",
         "Can't Stop the Feeling by Justin Timberlake": "ru0K8uYEZWw",
         "Don't Worry Be Happy by Bobby McFerrin": "d-diB65scQU",
