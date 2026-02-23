@@ -1,0 +1,108 @@
+:root {
+    --page-bg: #d8d8d3;
+    --title: #547d8e;
+    --accent: #dd8d92;
+    --text: #547d8e;
+    --link: #4f7f93;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--page-bg);
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+}
+
+.assignment-wrap {
+    width: min(760px, 94vw);
+    margin: 16px auto;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    color: var(--title);
+    font-size: clamp(2.05rem, 5.5vw, 3rem);
+    font-weight: 700;
+}
+
+h2 {
+    margin: 0.7rem 0 1.25rem;
+    color: var(--accent);
+    font-size: clamp(1.95rem, 4.6vw, 2.55rem);
+    font-weight: 700;
+}
+
+.mood-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: clamp(1.45rem, 3.5vw, 2rem);
+    margin-bottom: 1.35rem;
+}
+
+select {
+    font-size: clamp(1.35rem, 3.2vw, 2rem);
+    padding: 0.2rem 0.45rem;
+    border: 3px solid #2f414a;
+    border-radius: 6px;
+    background: #dce7eb;
+    color: var(--text);
+}
+
+.song-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    width: min(640px, 100%);
+}
+
+.song-list li {
+    text-align: left;
+    margin-bottom: 1.05rem;
+}
+
+.song-list a {
+    color: var(--link);
+    text-decoration: underline;
+    font-size: clamp(1.45rem, 3.8vw, 2.2rem);
+    line-height: 1.35;
+}
+
+.video-wrap {
+    width: min(640px, 100%);
+    margin: 0 auto;
+}
+
+#song-video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+}
+
+.signature {
+    margin: 1rem 0 0;
+    color: var(--accent);
+    font-size: clamp(1.25rem, 2.6vw, 1.55rem);
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 620px) {
+    .mood-controls {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .song-list li {
+        text-align: center;
+    }
+}

@@ -1,6 +1,6 @@
 //button click example
 document.getElementById("btn-show-message").onclick = ()=>{
-    document.getElementById("p-message").innerHTML = "Hi Emma!";
+    document.getElementById("p-message").innerHTML = "Hi Portia";
 };
 
 //link click example
@@ -40,35 +40,34 @@ document.getElementById("txt-num-days").onchange = (e) => {
     }
 };
 
-const p = document.getElementById("p-count-display");
+const p =document.getElementById("p-count-display");
 let count = 0;
 let countInterval;
 const startButton = document.getElementById("btn-start-count");
 
 startButton.onclick = () => {
-    startButton.disabled = true;
     countInterval = setInterval(()=>{
+        startButton.disabled = true;
         p.innerHTML = count++;
     },500);
 };
 
 document.getElementById("btn-pause-count").onclick = () => {
-    clearInterval(countInterval);
     startButton.disabled = false;
-}
+    clearInterval(countInterval);
+};
 
 document.getElementById("btn-stop-count").onclick = () => {
-    count = 0;
-    p.innerHTML = count;
-    clearInterval(countInterval);
     startButton.disabled = false;
-}
+    count = 0;
+    clearInterval(countInterval);
+};
 
 /* Display the date */
 setInterval(()=>{
     const today = new Date();
-    const month = today.getMonth() + 1;
-    const day = today.getDate();
+    const month = today.getMonth();
+    const day = today.getDay();
     const year = today.getFullYear();
     const seconds = today.getSeconds();
     const minutes = today.getMinutes();
@@ -76,3 +75,23 @@ setInterval(()=>{
 
     document.getElementById("p-date").innerHTML = `${hours}:${minutes}:${seconds}, ${month}/${day}/${year}`;
 }, 500);
+
+/* Donations */
+document.getElementById("btn-display-donation").onclick = () => {
+    const errorP = document.getElementById("p-donation-error");
+    errorP.innerHTML = "";  //if you click the button twice
+
+    const donationText = document.getElementById("txt-donation").value;
+
+    if(isNaN(donationText) || donationText < 0){
+        errorP.innerHTML = "* Invalid amount";
+        return;
+    }
+
+    donation = parseInt(donationText);
+    const percentGoal = donation/5000 * 100;
+
+    document.getElementById("p-donation").innerHTML = `You've reached ${percentGoal}% of your goal.`
+
+    document.querySelector(":root").style.setProperty("--donation",percentGoal + "%");
+}
