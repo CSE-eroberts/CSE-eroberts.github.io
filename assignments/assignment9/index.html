@@ -14,10 +14,16 @@
 
         <section id="song-gallery" class="song-gallery" aria-label="Song gallery"></section>
 
-        <p class="signature">@portiaplante.com</p>
+        <p class="signature">@CSE-eroberts.github.io</p>
     </main>
 
-    <div id="song-modal" class="w3-modal" aria-hidden="true">
+    <div
+        id="song-modal"
+        class="w3-modal"
+        aria-hidden="true"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title">
         <div class="w3-modal-content modal-panel">
             <span id="modal-close" class="w3-button w3-display-topright" aria-label="Close modal">&times;</span>
             <div class="modal-layout">
@@ -33,9 +39,7 @@
                 </div>
                 <section class="modal-details" aria-live="polite">
                     <h3 id="modal-title"></h3>
-                    <p id="modal-artist" class="lead"></p>
-                    <p id="modal-album-year"></p>
-                    <p id="modal-genre"></p>
+                    <div id="modal-info" class="song-info"></div>
                 </section>
             </div>
         </div>

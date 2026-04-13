@@ -9,6 +9,10 @@ class Song {
         this.youtubeCode = youtubeCode;
     }
 
+    coverArtPath() {
+        return `images/${this.coverArt}`;
+    }
+
     getCard(onClick) {
         const button = document.createElement("button");
         button.type = "button";
@@ -21,7 +25,7 @@ class Song {
                 <p>By ${this.artist}</p>
             </header>
             <div class="cover-wrap">
-                <img src="${this.coverArt}" alt="${this.album} cover art">
+                <img src="${this.coverArtPath()}" alt="${this.album} cover art">
             </div>
         `;
 
@@ -36,6 +40,24 @@ class Song {
     albumWithYear() {
         return `${this.album}, ${this.year}`;
     }
+
+    detailItems() {
+        return [
+            { className: "lead", value: `by ${this.artist}` },
+            { value: this.albumWithYear() },
+            { value: this.genre }
+        ];
+    }
+
+    getInfoMarkup() {
+        return this.detailItems()
+            .map(
+                ({ className = "", value }) => `
+                    <p class="${className}">${value}</p>
+                `
+            )
+            .join("");
+    }
 }
 
 const songs = [
@@ -45,7 +67,7 @@ const songs = [
         "In the Aeroplane Over the Sea",
         1998,
         "Indie Folk",
-        "images/two-headed-boy.svg",
+        "twoheadedboy.jpeg",
         "TudLjZ_4VhU"
     ),
     new Song(
@@ -54,7 +76,7 @@ const songs = [
         "Jailhouse Rock",
         1957,
         "Rock and Roll",
-        "images/jailhouse-rock.svg",
+        "jailhouserock.jpeg",
         "gj0Rz-uP4Mk"
     ),
     new Song(
@@ -63,7 +85,7 @@ const songs = [
         "Kind of Blue",
         1959,
         "Jazz",
-        "images/so-what.svg",
+        "sowhat.jpeg",
         "ylXk1LBvIqU"
     ),
     new Song(
@@ -72,7 +94,7 @@ const songs = [
         "Jolene",
         1974,
         "Country",
-        "images/jolene.svg",
+        "jolene.jpeg",
         "Ixrje2rXLMA"
     )
 ];
@@ -83,17 +105,17 @@ const dom = {
     closeBtn: document.getElementById("modal-close"),
     video: document.getElementById("modal-video"),
     title: document.getElementById("modal-title"),
-    artist: document.getElementById("modal-artist"),
-    albumYear: document.getElementById("modal-album-year"),
-    genre: document.getElementById("modal-genre")
+    info: document.getElementById("modal-info")
+};
+
+const populateModal = (song) => {
+    dom.title.textContent = song.title;
+    dom.info.innerHTML = song.getInfoMarkup();
+    dom.video.src = song.youtubeEmbedUrl();
 };
 
 const openModal = (song) => {
-    dom.title.textContent = song.title;
-    dom.artist.textContent = `by ${song.artist}`;
-    dom.albumYear.textContent = song.albumWithYear();
-    dom.genre.textContent = song.genre;
-    dom.video.src = song.youtubeEmbedUrl();
+    populateModal(song);
     dom.modal.style.display = "block";
     dom.modal.setAttribute("aria-hidden", "false");
 };
@@ -102,6 +124,7 @@ const closeModal = () => {
     dom.modal.style.display = "none";
     dom.modal.setAttribute("aria-hidden", "true");
     dom.video.src = "";
+    dom.info.innerHTML = "";
 };
 
 const renderSongs = () => {
