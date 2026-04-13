@@ -1,0 +1,180 @@
+:root {
+    --page-bg: #d8d8d3;
+    --title: #3f6e82;
+    --accent: #ce7f83;
+    --card-header: #4a66ad;
+    --text-light: #f4f6fb;
+    --modal-bg: #c5d3ea;
+    --modal-text: #3657a3;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--page-bg);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2e4b56;
+}
+
+.assignment-wrap {
+    width: min(1520px, 96vw);
+    margin: 14px auto 24px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    color: var(--title);
+    font-size: clamp(2.1rem, 5vw, 3.2rem);
+}
+
+h2 {
+    margin: 0.55rem 0 1.25rem;
+    color: var(--accent);
+    font-size: clamp(1.85rem, 4.3vw, 2.75rem);
+}
+
+.song-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.song-card {
+    border: 0;
+    padding: 0;
+    border-radius: 10px;
+    background: #fff;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: left;
+    box-shadow: 0 6px 16px rgba(34, 54, 74, 0.2);
+}
+
+.song-card:focus-visible {
+    outline: 3px solid #2b3c7e;
+    outline-offset: 3px;
+}
+
+.song-head {
+    background: var(--card-header);
+    color: var(--text-light);
+    text-align: center;
+    padding: 12px 10px 14px;
+}
+
+.song-head h3 {
+    margin: 0;
+    font-size: clamp(1.65rem, 3vw, 2rem);
+    font-weight: 500;
+}
+
+.song-head p {
+    margin: 6px 0 0;
+    font-size: clamp(1.08rem, 2.2vw, 1.95rem);
+}
+
+.cover-wrap {
+    aspect-ratio: 1 / 1;
+}
+
+.cover-wrap img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.signature {
+    margin: 1.05rem 0 0;
+    color: var(--accent);
+    font-size: clamp(1.2rem, 2.3vw, 1.85rem);
+}
+
+.modal-panel {
+    width: min(990px, 92vw);
+    margin-top: 80px;
+    border-radius: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+.modal-layout {
+    display: grid;
+    grid-template-columns: 1.45fr 1fr;
+    align-items: stretch;
+}
+
+.modal-video-wrap {
+    background: #000;
+}
+
+#modal-video {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    border: 0;
+    display: block;
+}
+
+.modal-details {
+    padding: 16px 22px;
+    background: var(--modal-bg);
+    color: var(--modal-text);
+}
+
+.modal-details h3 {
+    margin: 0 0 12px;
+    font-size: clamp(1.9rem, 3vw, 2.55rem);
+    font-weight: 500;
+}
+
+.modal-details p {
+    margin: 0 0 18px;
+    font-size: clamp(1.35rem, 2.3vw, 1.95rem);
+    line-height: 1.25;
+}
+
+.modal-details .lead {
+    margin-top: 4px;
+}
+
+#modal-close {
+    color: #2f4ca0;
+    font-size: 2rem;
+    line-height: 1;
+    z-index: 2;
+}
+
+@media (max-width: 950px) {
+    .song-gallery {
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
+
+    .modal-layout {
+        grid-template-columns: 1fr;
+    }
+
+    #modal-video {
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 620px) {
+    .song-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-panel {
+        width: min(540px, 94vw);
+        margin-top: 40px;
+    }
+
+    #modal-video {
+        min-height: 200px;
+    }
+}

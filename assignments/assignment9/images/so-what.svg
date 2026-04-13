@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title desc">
+  <title id="title">So What Cover</title>
+  <desc id="desc">Stylized dark jazz cover art for So What.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1c1d1f"/>
+      <stop offset="100%" stop-color="#0b0c0d"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#bg)"/>
+  <circle cx="280" cy="280" r="160" fill="#3d4147"/>
+  <path d="M330 420 L690 560" stroke="#8f7a33" stroke-width="18"/>
+  <path d="M690 560 L750 580" stroke="#8f7a33" stroke-width="30"/>
+  <text x="380" y="360" fill="#cfbb4c" font-size="102" font-weight="700" font-family="Arial, sans-serif">SO WHAT?</text>
+  <text x="380" y="470" fill="#e5e4df" font-size="94" font-weight="700" font-family="Arial, sans-serif">MILES DAVIS</text>
+</svg>

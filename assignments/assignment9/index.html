@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 9 - Classes</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="assignment-wrap">
+        <h1>Classes</h1>
+        <h2>Music Time</h2>
+
+        <section id="song-gallery" class="song-gallery" aria-label="Song gallery"></section>
+
+        <p class="signature">@portiaplante.com</p>
+    </main>
+
+    <div id="song-modal" class="w3-modal" aria-hidden="true">
+        <div class="w3-modal-content modal-panel">
+            <span id="modal-close" class="w3-button w3-display-topright" aria-label="Close modal">&times;</span>
+            <div class="modal-layout">
+                <div class="modal-video-wrap">
+                    <iframe
+                        id="modal-video"
+                        title="Song video"
+                        src=""
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <section class="modal-details" aria-live="polite">
+                    <h3 id="modal-title"></h3>
+                    <p id="modal-artist" class="lead"></p>
+                    <p id="modal-album-year"></p>
+                    <p id="modal-genre"></p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
